@@ -3,7 +3,7 @@ name: Terraform Apply with Vault
 on:
   push:
     branches:
-      - main
+      - ec2
 
 jobs:
   terraform-vpc:
@@ -26,16 +26,16 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
-      working-directory: ./vpc-module  # Specify your Terraform directory
+      working-directory: ./ec2-instance-module  # Specify your Terraform directory
 
     - name: Terraform Plan
       run: terraform plan
-      working-directory: ./vpc-module
+      working-directory: ./ec2-instance-module
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
-      working-directory: ./vpc-module
+      working-directory: ./ec2-instance-module
 
-################### EC2 ###################
+
 
   

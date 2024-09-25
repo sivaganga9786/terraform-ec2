@@ -25,15 +25,15 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
-      working-directory: ./terraform-ec2/vpc-module  # Specify your Terraform directory
+      working-directory: ./vpc-module  # Specify your Terraform directory
 
     - name: Terraform Plan
       run: terraform plan
-      working-directory: ./terraform-ec2/vpc-module
+      working-directory: ./vpc-module
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
-      working-directory: ./terraform-ec2/vpc-module
+      working-directory: ./vpc-module
 
 ################### EC2 ###################
 

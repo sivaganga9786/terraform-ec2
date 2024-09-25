@@ -18,10 +18,11 @@ jobs:
       with:
         terraform_version: 1.5.0
 
-    - name: Set Vault environment variables
+    - name: Set aws environment variables
       run: |
-        echo "VAULT_ADDR=http://127.0.0.1:8200" >> $GITHUB_ENV
-        echo "VAULT_TOKEN=${{ secrets.VAULT_TOKEN }}" >> $GITHUB_ENV  # Ensure VAULT_TOKEN is set in GitHub Secrets
+        echo "AWS_ACCESS_KEY_ID=${{ secrets.ACCESS_KEY }}" >> $GITHUB_ENV  # AWS Access Key from GitHub Secrets
+        echo "AWS_SECRET_ACCESS_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV  # AWS Secret Key from GitHub Secrets
+
 
     - name: Terraform Init
       run: terraform init

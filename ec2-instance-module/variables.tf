@@ -16,10 +16,10 @@ variable "ec2_sg_name" {
   description = "The name of the EC2 security group"
 
 }
-variable "secret_key" {}
 
-variable "access_key" {}
 variable "region" {
   description = "The AWS region to deploy to"
 
 }
+
+variable "secret_path" {}

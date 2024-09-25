@@ -29,9 +29,6 @@ variable "region" {
 
 
 
-variable "secret_key" {}
-
-variable "access_key" {}
 
 variable "igw" {}
 
@@ -41,3 +38,4 @@ variable "private_subnet" {}
 variable "public_route_table" {}
 
 variable "public_subnet" {}
+variable "secret_path" {}

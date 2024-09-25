@@ -11,3 +11,7 @@ data "aws_subnets" "vpc_subnets" {
     values = [data.aws_vpc.existing_vpc.id]  # Use the VPC ID from the previous data block
   }
 }
+
+data "vault_generic_secret" "aws_access" {
+  path = var.secret_path
+}

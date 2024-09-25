@@ -12,6 +12,6 @@ data "aws_subnets" "vpc_subnets" {
   }
 }
 
-data "vault_generic_secret" "aws_access" {
-  path = var.secret_path
-}
+#data "vault_generic_secret" "aws_access" {
+ # path = var.secret_path
+#}

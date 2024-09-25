@@ -27,3 +27,8 @@ variable "ec2_sg_name" {
   description = "Name of the EC2 security group"
   type        = string
 }
+
+variable "key_name" {
+  description = "The name of the key pair to use for the instance"
+  type        = string
+}

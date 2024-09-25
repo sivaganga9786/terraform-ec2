@@ -27,6 +27,7 @@ resource "aws_instance" "ec2_instance" {
   instance_type   = var.instance_type
   subnet_id       = var.subnet_id  # Use the subnet from the VPC module
   security_groups = [aws_security_group.ec2_sg.id]
+  key_name              = var.key_name
   tags = {
     Name = var.ec2_instance_name
   }

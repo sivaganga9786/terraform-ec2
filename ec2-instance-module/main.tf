@@ -6,5 +6,5 @@ module "ec2" {
   vpc_id         = data.aws_vpc.existing_vpc.id
   ec2_instance_name  = var.ec2_instance_name
   ec2_sg_name        = var.ec2_sg_name
-  key_name            = ec2-ssh
+  key_name            = "ec2-ssh"
 }
